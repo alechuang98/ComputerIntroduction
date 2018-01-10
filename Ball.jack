@@ -1,0 +1,40 @@
+class Ball{
+	field int pos,r,dest;
+	field char in;
+	constructor Ball new(){
+		let pos=255;
+		let r=40;
+		do Screen.drawCircle(pos,pos-r,r);
+		return this;
+	}
+	method void move(){
+		let in=Keyboard.keyPressed();
+		if(in=132){
+			let dest=pos+160;
+			if(dest<(255+161)){
+				while(pos<(dest-1)){
+					do Screen.setColor(false);
+					do Screen.drawCircle(pos,255-r,r);
+					let pos=pos+10;
+					do Screen.setColor(true);
+					do Screen.drawCircle(pos,255-r,r);
+					do Sys.wait(12);
+				}
+			}
+		}
+		if(in=130){
+			let dest=pos-160;
+			if(dest>(255-161)){
+				while(pos>(dest+1)){
+					do Screen.setColor(false);
+					do Screen.drawCircle(pos,255-r,r);
+					let pos=pos-10;
+					do Screen.setColor(true);
+					do Screen.drawCircle(pos,255-r,r);
+					do Sys.wait(12);
+				}
+			}
+		}
+		return;
+	}
+}
