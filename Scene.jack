@@ -1,56 +1,88 @@
 class Scene{
-	field int x,y;
-	constructor Scene new(int Ax ,int Ay){
+	field int x,y,i,T,msk,L,M,R;
+	field Array yp,xl;
+	constructor Scene new(int Ax ,int Ay,int _L,int _M,int _R){
+		let yp = Array.new(15);
+		let yp[1]=111;
+		let yp[2]=123;
+		let yp[3]=136;
+		let yp[4]=150;
+		let yp[5]=165;
+		let yp[6]=181;
+		let yp[7]=198;
+		let yp[8]=216;
+		let yp[9]=235;
+		let yp[10]=255;
+
+		let xl = Array.new(15);
+		let xl[1]=49;
+		let xl[2]=58;
+		let xl[3]=67;
+		let xl[4]=78;
+		let xl[5]=90;
+		let xl[6]=102;
+		let xl[7]=116;
+		let xl[8]=130;
+		let xl[9]=145;
+		let xl[10]=160;
 		let x = Ax;
         let y = Ay;
+        let L=_L;
+        let R=_R;
+        let M=_M;
 		do draw();
 		return this;
 	}
 	method void draw(){
+
 		do Screen.setColor(true);
-		do Screen.drawLine(16,255,186,100);
-		do Screen.drawLine(17,255,187,100);
-		do Screen.drawLine(176,255,226,100);
-		do Screen.drawLine(177,255,227,100);
+		do Screen.drawLine(16,255,196,100);
+		do Screen.drawLine(17,255,197,100);
+		do Screen.drawLine(176,255,236,100);
+		do Screen.drawLine(177,255,237,100);
 		do Screen.drawLine(336,255,276,100);
 		do Screen.drawLine(337,255,277,100);
 		do Screen.drawLine(496,255,316,100);
 		do Screen.drawLine(497,255,317,100);
 
-		//obstacle(middle)
+		do creatOB(L,1);
+		do creatOB(M,2);
+		do creatOB(R,3);
 
-		do Screen.drawLine(227,100,276,100);
-		do Screen.drawLine(227,101,276,101);
-		do Screen.drawLine(227,90,276,90);
-		do Screen.drawLine(227,91,276,91);
-		do Screen.drawLine(227,90,227,100);
-		do Screen.drawLine(228,90,228,100);
-		do Screen.drawLine(276,90,276,100);
-		do Screen.drawLine(277,90,277,100);
+		return;
+	}
 
-		//obstacle(left)
+	method void creatOB(int pos,int id){
+		let T=10;
+		while(T>0){
+			if((pos&1)=1){
+				if(id=1){
+					do drawOB((9676-(36*yp[T]))/31,yp[T],xl[T]);
+				}
+				if(id=2){
+					do drawOB((8516-(12*yp[T]))/31,yp[T],xl[T]);	
+				}
+				if(id=3){
+					do drawOB((7356+(12*yp[T]))/31,yp[T],xl[T]);		
+				}
+			}
+			let T=T-1;
+			let pos=(pos/2);
+		}
+		return;
+	}
 
-		do Screen.drawLine(186,100,227,100);
-		do Screen.drawLine(186,101,227,101);
-		do Screen.drawLine(186,90,227,90);
-		do Screen.drawLine(186,91,227,91);
-		do Screen.drawLine(186,90,227,100);
-		do Screen.drawLine(187,90,187,100);
-		do Screen.drawLine(185,90,185,100);
-		do Screen.drawLine(186,90,186,100);
+	method void drawOB(int _x,int _y,int size){
+		do Screen.setColor(true);
+		do Screen.drawRectangle(_x+10,_y-(size/2),_x+size-10,_y);
+		return;
+	}
 
-		//obstacle(right)
-
-		do Screen.drawLine(276,100,316,100);
-		do Screen.drawLine(276,101,316,101);
-		do Screen.drawLine(276,90,316,90);
-		do Screen.drawLine(276,91,316,91);
-		do Screen.drawLine(276,90,316,100);
-		do Screen.drawLine(277,90,277,100);
-		do Screen.drawLine(275,90,275,100);
-		do Screen.drawLine(276,90,276,100);
-
-		
+	method void update(){
+		let L=(L/2);
+		let M=(M/2);
+		let R=(R/2);
+		do Screen.clearScreen();
 		return;
 	}
 }

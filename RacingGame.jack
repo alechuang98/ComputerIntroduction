@@ -1,0 +1,15 @@
+class RacingGame{
+	field Scene scene;
+	field int T;
+	constructor RacingGame new(){
+		let scene = Scene.new(0 ,0, 1024, 512, 130);
+		let T=10;
+		while(T>0){
+			let T=(T-1);
+			do scene.update();
+			do scene.draw();
+			do Sys.wait(300);
+		}
+		return this;
+	}
+}

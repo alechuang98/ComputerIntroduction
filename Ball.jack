@@ -15,26 +15,28 @@ class Ball{
 				while(pos<(dest-1)){
 					do Screen.setColor(false);
 					do Screen.drawCircle(pos,255-r,r);
-					let pos=pos+10;
+					let pos=pos+20;
 					do Screen.setColor(true);
 					do Screen.drawCircle(pos,255-r,r);
 					do Sys.wait(12);
 				}
 			}
 		}
+		do Sys.wait(10);
 		if(in=130){
 			let dest=pos-160;
 			if(dest>(255-161)){
 				while(pos>(dest+1)){
 					do Screen.setColor(false);
 					do Screen.drawCircle(pos,255-r,r);
-					let pos=pos-10;
+					let pos=pos-20;
 					do Screen.setColor(true);
 					do Screen.drawCircle(pos,255-r,r);
 					do Sys.wait(12);
 				}
 			}
 		}
+		do Sys.wait(10);
 		return;
 	}
 }

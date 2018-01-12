@@ -1,0 +1,7 @@
+class Main{
+	function void main(){
+		var RacingGame game;
+		let game = RacingGame.new();
+		return;
+	}
+}
