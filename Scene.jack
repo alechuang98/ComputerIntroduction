@@ -1,0 +1,56 @@
+class Scene{
+	field int x,y;
+	constructor Scene new(int Ax ,int Ay){
+		let x = Ax;
+        let y = Ay;
+		do draw();
+		return this;
+	}
+	method void draw(){
+		do Screen.setColor(true);
+		do Screen.drawLine(16,255,186,100);
+		do Screen.drawLine(17,255,187,100);
+		do Screen.drawLine(176,255,226,100);
+		do Screen.drawLine(177,255,227,100);
+		do Screen.drawLine(336,255,276,100);
+		do Screen.drawLine(337,255,277,100);
+		do Screen.drawLine(496,255,316,100);
+		do Screen.drawLine(497,255,317,100);
+
+		//obstacle(middle)
+
+		do Screen.drawLine(227,100,276,100);
+		do Screen.drawLine(227,101,276,101);
+		do Screen.drawLine(227,90,276,90);
+		do Screen.drawLine(227,91,276,91);
+		do Screen.drawLine(227,90,227,100);
+		do Screen.drawLine(228,90,228,100);
+		do Screen.drawLine(276,90,276,100);
+		do Screen.drawLine(277,90,277,100);
+
+		//obstacle(left)
+
+		do Screen.drawLine(186,100,227,100);
+		do Screen.drawLine(186,101,227,101);
+		do Screen.drawLine(186,90,227,90);
+		do Screen.drawLine(186,91,227,91);
+		do Screen.drawLine(186,90,227,100);
+		do Screen.drawLine(187,90,187,100);
+		do Screen.drawLine(185,90,185,100);
+		do Screen.drawLine(186,90,186,100);
+
+		//obstacle(right)
+
+		do Screen.drawLine(276,100,316,100);
+		do Screen.drawLine(276,101,316,101);
+		do Screen.drawLine(276,90,316,90);
+		do Screen.drawLine(276,91,316,91);
+		do Screen.drawLine(276,90,316,100);
+		do Screen.drawLine(277,90,277,100);
+		do Screen.drawLine(275,90,275,100);
+		do Screen.drawLine(276,90,276,100);
+
+		
+		return;
+	}
+}
