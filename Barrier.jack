@@ -1,0 +1,42 @@
+class Barrier{
+	field int a;
+	constructor Barrier new(int x, int y, int d){
+		do draw(x, y, d);
+		return this;
+	}
+	method void draw(int x, int y, int d){
+
+		var int d3;
+		var int d10;
+		var int dp;
+		let d3 = d/3;
+		let dp = d-d3;
+		let d10 = d/10;
+
+		//clear area
+		do Screen.setColor(false);
+		do Screen.drawRectangle(x-d, y-(2*dp-2),x+d, y-dp);
+		do Screen.setColor(true);
+
+		//leftside
+		do Screen.drawLine(x-d, y-dp, x, y-dp);
+		do Screen.drawLine(x-d, y-(2*dp-1), x, y-(2*dp-1));
+		do Screen.drawLine(x-d, y, x-d, y-(2*dp));
+		do Screen.drawLine(x-(d-1), y, x-(d-1), y-(2*dp));
+
+		//rightside
+		do Screen.drawLine(x, y-dp, x+d, y-dp);
+		do Screen.drawLine(x, y-(2*dp-1), x+d, y-(2*dp-1));
+		do Screen.drawLine(x+d, y, x+d, y-(2*dp));
+		do Screen.drawLine(x+(d-1), y, x+(d-1), y-(2*dp));
+
+		//strip
+		do Screen.drawLine(x-d, y-dp, x, y-(2*dp-1));
+		do Screen.drawLine(x-d+d10, y-dp, x+d10, y-(2*dp-1));
+		do Screen.drawLine(x, y-dp, x+d, y-(2*dp-1));
+		do Screen.drawLine(x-d10, y-dp, x+d-d10, y-(2*dp-1));
+
+		return;
+	}
+
+}
