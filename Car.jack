@@ -1,0 +1,84 @@
+class Car{
+	field int a;
+	constructor Car new(int x, int y){
+		do draw(x, y);
+		return this;
+	}
+	method void draw(int x, int y){
+		//top
+		do Screen.drawLine(x-16,y+194,x-13,y+190);
+		do Screen.drawLine(x+16,y+194,x+13,y+190);
+		do Screen.drawLine(x-13,y+190,x+13,y+190);
+
+
+		//left shoulder
+		do Screen.drawLine(x-19,y+192,x-15,y+192);
+		do Screen.drawLine(x-19,y+192,x-21,y+196);
+		do Screen.drawLine(x-21,y+196,x-21,y+203);
+
+		//right shoulder
+		do Screen.drawLine(x+19,y+192,x+15,y+192);
+		do Screen.drawLine(x+19,y+192,x+21,y+196);
+		do Screen.drawLine(x+21,y+196,x+21,y+203);
+
+		//upper back
+		do Screen.drawLine(x-22,y+206,x-16,y+204);
+		do Screen.drawLine(x+22,y+206,x+16,y+204);
+		do Screen.drawLine(x-16,y+204,x+16,y+204);
+
+		do Screen.drawLine(x-22,y+206,x-16,y+194);
+		do Screen.drawLine(x+22,y+206,x+16,y+194);
+		do Screen.drawLine(x-16,y+194,x+16,y+194);
+
+		//back
+		do Screen.drawLine(x-15,y+220,x+15,y+220);
+		do Screen.drawLine(x-15,y+223,x+15,y+223);
+		do Screen.drawLine(x-14,y+220,x-14,y+223);
+		do Screen.drawLine(x+14,y+220,x+14,y+223);
+
+		do Screen.drawLine(x-22,y+206,x-18,y+210);
+		do Screen.drawLine(x+22,y+206,x+18,y+210);
+		do Screen.drawLine(x-18,y+210,x+18,y+210);
+
+		//card
+		do Screen.drawLine(x-20,y+218,x+20,y+218);
+		do Screen.drawLine(x-20,y+214,x+20,y+214);
+		do Screen.drawLine(x-20,y+214,x-20,y+218);
+		do Screen.drawLine(x+20,y+214,x+20,y+218);
+
+		//left ass
+		do Screen.drawLine(x-27,y+219,x-10,y+219);
+		do Screen.drawLine(x-27,y+219,x-30,y+210);
+		do Screen.drawLine(x-30,y+210,x-27,y+206);
+		do Screen.drawLine(x-27,y+206,x-22,y+206);
+
+		do Screen.drawLine(x-27,y+206,x-22,y+204);
+
+		//right ass
+		do Screen.drawLine(x+10,y+219,x+27,y+219);
+		do Screen.drawLine(x+27,y+219,x+30,y+210);
+		do Screen.drawLine(x+30,y+210,x+27,y+206);
+		do Screen.drawLine(x+27,y+206,x+22,y+206);
+
+		do Screen.drawLine(x+27,y+206,x+22,y+204);
+
+		//left wheel
+		do Screen.drawLine(x-25,y+220,x-25,y+230);
+		do Screen.drawLine(x-15,y+220,x-15,y+230);
+		do Screen.drawLine(x-25,y+230,x-15,y+230);
+		do Screen.drawLine(x-25,y+220,x-15,y+220);
+		do Screen.drawLine(x-21,y+220,x-21,y+230);
+
+
+		//right wheel
+		do Screen.drawLine(x+15,y+220,x+15,y+230);
+		do Screen.drawLine(x+25,y+220,x+25,y+230);
+		do Screen.drawLine(x+15,y+230,x+25,y+230);
+		do Screen.drawLine(x+15,y+220,x+25,y+220);
+		do Screen.drawLine(x+21,y+220,x+21,y+230);
+
+
+
+		return;
+	}
+}
