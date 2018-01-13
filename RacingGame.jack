@@ -8,9 +8,11 @@ class RacingGame{
 		let T=1000;
 		while(T>0){
 			let T=(T-1);
-			
 			do scene.update();
 			do scene.draw();
+			do Output.moveCursor(1,1);
+			do Output.printString("Current Score: ");
+			do Output.printInt(scene._cnt());
 			do ball.move(scene);
 			do ball.draw();
 			if(RacingGame.there(scene._L())){

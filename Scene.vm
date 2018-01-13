@@ -1,12 +1,12 @@
 function Scene.new 0
-push constant 11
+push constant 12
 call Memory.alloc 1
 pop pointer 0
 push constant 25
 call Array.new 1
-pop this 9
+pop this 10
 push constant 1
-push this 9
+push this 10
 add
 push constant 112
 pop temp 0
@@ -14,7 +14,7 @@ pop pointer 1
 push temp 0
 pop that 0
 push constant 2
-push this 9
+push this 10
 add
 push constant 117
 pop temp 0
@@ -22,7 +22,7 @@ pop pointer 1
 push temp 0
 pop that 0
 push constant 3
-push this 9
+push this 10
 add
 push constant 123
 pop temp 0
@@ -30,7 +30,7 @@ pop pointer 1
 push temp 0
 pop that 0
 push constant 4
-push this 9
+push this 10
 add
 push constant 130
 pop temp 0
@@ -38,7 +38,7 @@ pop pointer 1
 push temp 0
 pop that 0
 push constant 5
-push this 9
+push this 10
 add
 push constant 138
 pop temp 0
@@ -46,7 +46,7 @@ pop pointer 1
 push temp 0
 pop that 0
 push constant 6
-push this 9
+push this 10
 add
 push constant 147
 pop temp 0
@@ -54,7 +54,7 @@ pop pointer 1
 push temp 0
 pop that 0
 push constant 7
-push this 9
+push this 10
 add
 push constant 157
 pop temp 0
@@ -62,7 +62,7 @@ pop pointer 1
 push temp 0
 pop that 0
 push constant 8
-push this 9
+push this 10
 add
 push constant 168
 pop temp 0
@@ -70,7 +70,7 @@ pop pointer 1
 push temp 0
 pop that 0
 push constant 9
-push this 9
+push this 10
 add
 push constant 180
 pop temp 0
@@ -78,7 +78,7 @@ pop pointer 1
 push temp 0
 pop that 0
 push constant 10
-push this 9
+push this 10
 add
 push constant 193
 pop temp 0
@@ -86,7 +86,7 @@ pop pointer 1
 push temp 0
 pop that 0
 push constant 11
-push this 9
+push this 10
 add
 push constant 207
 pop temp 0
@@ -94,7 +94,7 @@ pop pointer 1
 push temp 0
 pop that 0
 push constant 12
-push this 9
+push this 10
 add
 push constant 222
 pop temp 0
@@ -102,7 +102,7 @@ pop pointer 1
 push temp 0
 pop that 0
 push constant 13
-push this 9
+push this 10
 add
 push constant 238
 pop temp 0
@@ -110,7 +110,7 @@ pop pointer 1
 push temp 0
 pop that 0
 push constant 14
-push this 9
+push this 10
 add
 push constant 255
 pop temp 0
@@ -119,9 +119,9 @@ push temp 0
 pop that 0
 push constant 25
 call Array.new 1
-pop this 10
+pop this 11
 push constant 1
-push this 10
+push this 11
 add
 push constant 49
 pop temp 0
@@ -129,7 +129,7 @@ pop pointer 1
 push temp 0
 pop that 0
 push constant 2
-push this 10
+push this 11
 add
 push constant 53
 pop temp 0
@@ -137,7 +137,7 @@ pop pointer 1
 push temp 0
 pop that 0
 push constant 3
-push this 10
+push this 11
 add
 push constant 58
 pop temp 0
@@ -145,7 +145,7 @@ pop pointer 1
 push temp 0
 pop that 0
 push constant 4
-push this 10
+push this 11
 add
 push constant 63
 pop temp 0
@@ -153,7 +153,7 @@ pop pointer 1
 push temp 0
 pop that 0
 push constant 5
-push this 10
+push this 11
 add
 push constant 69
 pop temp 0
@@ -161,7 +161,7 @@ pop pointer 1
 push temp 0
 pop that 0
 push constant 6
-push this 10
+push this 11
 add
 push constant 76
 pop temp 0
@@ -169,7 +169,7 @@ pop pointer 1
 push temp 0
 pop that 0
 push constant 7
-push this 10
+push this 11
 add
 push constant 84
 pop temp 0
@@ -177,7 +177,7 @@ pop pointer 1
 push temp 0
 pop that 0
 push constant 8
-push this 10
+push this 11
 add
 push constant 93
 pop temp 0
@@ -185,7 +185,7 @@ pop pointer 1
 push temp 0
 pop that 0
 push constant 9
-push this 10
+push this 11
 add
 push constant 102
 pop temp 0
@@ -193,7 +193,7 @@ pop pointer 1
 push temp 0
 pop that 0
 push constant 10
-push this 10
+push this 11
 add
 push constant 112
 pop temp 0
@@ -201,7 +201,7 @@ pop pointer 1
 push temp 0
 pop that 0
 push constant 11
-push this 10
+push this 11
 add
 push constant 123
 pop temp 0
@@ -209,7 +209,7 @@ pop pointer 1
 push temp 0
 pop that 0
 push constant 12
-push this 10
+push this 11
 add
 push constant 134
 pop temp 0
@@ -217,7 +217,7 @@ pop pointer 1
 push temp 0
 pop that 0
 push constant 13
-push this 10
+push this 11
 add
 push constant 146
 pop temp 0
@@ -225,7 +225,7 @@ pop pointer 1
 push temp 0
 pop that 0
 push constant 14
-push this 10
+push this 11
 add
 push constant 160
 pop temp 0
@@ -244,6 +244,8 @@ push argument 3
 pop this 6
 push constant 0
 pop this 8
+push constant 0
+pop this 9
 push constant 87
 call Random.seed 1
 pop temp 0
@@ -353,7 +355,7 @@ push pointer 0
 push constant 9676
 push constant 36
 push this 3
-push this 9
+push this 10
 add
 pop pointer 1
 push that 0
@@ -362,12 +364,12 @@ sub
 push constant 31
 call Math.divide 2
 push this 3
-push this 9
+push this 10
 add
 pop pointer 1
 push that 0
 push this 3
-push this 10
+push this 11
 add
 pop pointer 1
 push that 0
@@ -384,7 +386,7 @@ push pointer 0
 push constant 8516
 push constant 12
 push this 3
-push this 9
+push this 10
 add
 pop pointer 1
 push that 0
@@ -393,12 +395,12 @@ sub
 push constant 31
 call Math.divide 2
 push this 3
-push this 9
+push this 10
 add
 pop pointer 1
 push that 0
 push this 3
-push this 10
+push this 11
 add
 pop pointer 1
 push that 0
@@ -415,7 +417,7 @@ push pointer 0
 push constant 7356
 push constant 12
 push this 3
-push this 9
+push this 10
 add
 pop pointer 1
 push that 0
@@ -424,12 +426,12 @@ add
 push constant 31
 call Math.divide 2
 push this 3
-push this 9
+push this 10
 add
 pop pointer 1
 push that 0
 push this 3
-push this 10
+push this 11
 add
 pop pointer 1
 push that 0
@@ -498,6 +500,10 @@ goto IF_FALSE0
 label IF_TRUE0
 push constant 0
 pop this 8
+push this 9
+push constant 1
+add
+pop this 9
 push this 4
 call Output.printInt 1
 pop temp 0
@@ -600,4 +606,9 @@ function Scene._M 0
 push argument 0
 pop pointer 0
 push this 6
+return
+function Scene._cnt 0
+push argument 0
+pop pointer 0
+push this 9
 return
