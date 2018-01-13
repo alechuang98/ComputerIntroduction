@@ -1,0 +1,248 @@
+function Barrier.draw 5
+push argument 2
+push constant 2
+call Math.divide 2
+pop local 1
+push argument 0
+push local 1
+add
+pop local 0
+push local 1
+push constant 3
+call Math.divide 2
+pop local 2
+push local 1
+push local 2
+sub
+pop local 4
+push local 1
+push constant 10
+call Math.divide 2
+pop local 3
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push local 0
+push local 1
+sub
+push argument 1
+push constant 2
+push local 4
+call Math.multiply 2
+push constant 2
+sub
+sub
+push local 0
+push local 1
+add
+push argument 1
+push local 4
+sub
+call Screen.drawRectangle 4
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push local 0
+push local 1
+sub
+push argument 1
+push local 4
+sub
+push local 0
+push argument 1
+push local 4
+sub
+call Screen.drawLine 4
+pop temp 0
+push local 0
+push local 1
+sub
+push argument 1
+push constant 2
+push local 4
+call Math.multiply 2
+push constant 1
+sub
+sub
+push local 0
+push argument 1
+push constant 2
+push local 4
+call Math.multiply 2
+push constant 1
+sub
+sub
+call Screen.drawLine 4
+pop temp 0
+push local 0
+push local 1
+sub
+push argument 1
+push local 0
+push local 1
+sub
+push argument 1
+push constant 2
+push local 4
+call Math.multiply 2
+sub
+call Screen.drawLine 4
+pop temp 0
+push local 0
+push local 1
+push constant 1
+sub
+sub
+push argument 1
+push local 0
+push local 1
+push constant 1
+sub
+sub
+push argument 1
+push constant 2
+push local 4
+call Math.multiply 2
+sub
+call Screen.drawLine 4
+pop temp 0
+push local 0
+push argument 1
+push local 4
+sub
+push local 0
+push local 1
+add
+push argument 1
+push local 4
+sub
+call Screen.drawLine 4
+pop temp 0
+push local 0
+push argument 1
+push constant 2
+push local 4
+call Math.multiply 2
+push constant 1
+sub
+sub
+push local 0
+push local 1
+add
+push argument 1
+push constant 2
+push local 4
+call Math.multiply 2
+push constant 1
+sub
+sub
+call Screen.drawLine 4
+pop temp 0
+push local 0
+push local 1
+add
+push argument 1
+push local 0
+push local 1
+add
+push argument 1
+push constant 2
+push local 4
+call Math.multiply 2
+sub
+call Screen.drawLine 4
+pop temp 0
+push local 0
+push local 1
+push constant 1
+sub
+add
+push argument 1
+push local 0
+push local 1
+push constant 1
+sub
+add
+push argument 1
+push constant 2
+push local 4
+call Math.multiply 2
+sub
+call Screen.drawLine 4
+pop temp 0
+push local 0
+push local 1
+sub
+push argument 1
+push local 4
+sub
+push local 0
+push argument 1
+push constant 2
+push local 4
+call Math.multiply 2
+push constant 1
+sub
+sub
+call Screen.drawLine 4
+pop temp 0
+push local 0
+push local 1
+sub
+push local 3
+add
+push argument 1
+push local 4
+sub
+push local 0
+push local 3
+add
+push argument 1
+push constant 2
+push local 4
+call Math.multiply 2
+push constant 1
+sub
+sub
+call Screen.drawLine 4
+pop temp 0
+push local 0
+push argument 1
+push local 4
+sub
+push local 0
+push local 1
+add
+push argument 1
+push constant 2
+push local 4
+call Math.multiply 2
+push constant 1
+sub
+sub
+call Screen.drawLine 4
+pop temp 0
+push local 0
+push local 3
+sub
+push argument 1
+push local 4
+sub
+push local 0
+push local 1
+add
+push local 3
+sub
+push argument 1
+push constant 2
+push local 4
+call Math.multiply 2
+push constant 1
+sub
+sub
+call Screen.drawLine 4
+pop temp 0
+push constant 0
+return

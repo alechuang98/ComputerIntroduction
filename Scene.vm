@@ -1,0 +1,588 @@
+function Scene.new 0
+push constant 11
+call Memory.alloc 1
+pop pointer 0
+push constant 25
+call Array.new 1
+pop this 9
+push constant 1
+push this 9
+add
+push constant 112
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 2
+push this 9
+add
+push constant 117
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 3
+push this 9
+add
+push constant 123
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 4
+push this 9
+add
+push constant 130
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 5
+push this 9
+add
+push constant 138
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 6
+push this 9
+add
+push constant 147
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 7
+push this 9
+add
+push constant 157
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 8
+push this 9
+add
+push constant 168
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 9
+push this 9
+add
+push constant 180
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 10
+push this 9
+add
+push constant 193
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 11
+push this 9
+add
+push constant 207
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 12
+push this 9
+add
+push constant 222
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 13
+push this 9
+add
+push constant 238
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 14
+push this 9
+add
+push constant 255
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 25
+call Array.new 1
+pop this 10
+push constant 1
+push this 10
+add
+push constant 49
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 2
+push this 10
+add
+push constant 53
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 3
+push this 10
+add
+push constant 58
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 4
+push this 10
+add
+push constant 63
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 5
+push this 10
+add
+push constant 69
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 6
+push this 10
+add
+push constant 76
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 7
+push this 10
+add
+push constant 84
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 8
+push this 10
+add
+push constant 93
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 9
+push this 10
+add
+push constant 102
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 10
+push this 10
+add
+push constant 112
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 11
+push this 10
+add
+push constant 123
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 12
+push this 10
+add
+push constant 134
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 13
+push this 10
+add
+push constant 146
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push constant 14
+push this 10
+add
+push constant 160
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push argument 0
+pop this 0
+push argument 1
+pop this 1
+push argument 2
+pop this 5
+push argument 4
+pop this 7
+push argument 3
+pop this 6
+push constant 0
+pop this 8
+push constant 87
+call Random.seed 1
+pop temp 0
+push pointer 0
+call Scene.draw 1
+pop temp 0
+push pointer 0
+return
+function Scene.draw 0
+push argument 0
+pop pointer 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push constant 16
+push constant 255
+push constant 196
+push constant 100
+call Screen.drawLine 4
+pop temp 0
+push constant 17
+push constant 255
+push constant 197
+push constant 100
+call Screen.drawLine 4
+pop temp 0
+push constant 176
+push constant 255
+push constant 236
+push constant 100
+call Screen.drawLine 4
+pop temp 0
+push constant 177
+push constant 255
+push constant 237
+push constant 100
+call Screen.drawLine 4
+pop temp 0
+push constant 336
+push constant 255
+push constant 276
+push constant 100
+call Screen.drawLine 4
+pop temp 0
+push constant 337
+push constant 255
+push constant 277
+push constant 100
+call Screen.drawLine 4
+pop temp 0
+push constant 496
+push constant 255
+push constant 316
+push constant 100
+call Screen.drawLine 4
+pop temp 0
+push constant 497
+push constant 255
+push constant 317
+push constant 100
+call Screen.drawLine 4
+pop temp 0
+push pointer 0
+push this 5
+push constant 1
+call Scene.creatOB 3
+pop temp 0
+push pointer 0
+push this 6
+push constant 2
+call Scene.creatOB 3
+pop temp 0
+push pointer 0
+push this 7
+push constant 3
+call Scene.creatOB 3
+pop temp 0
+push constant 0
+return
+function Scene.creatOB 0
+push argument 0
+pop pointer 0
+push constant 14
+pop this 3
+label WHILE_EXP0
+push this 3
+push constant 0
+gt
+not
+if-goto WHILE_END0
+push argument 1
+push constant 1
+and
+push constant 1
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push argument 2
+push constant 1
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push pointer 0
+push constant 9676
+push constant 36
+push this 3
+push this 9
+add
+pop pointer 1
+push that 0
+call Math.multiply 2
+sub
+push constant 31
+call Math.divide 2
+push this 3
+push this 9
+add
+pop pointer 1
+push that 0
+push this 3
+push this 10
+add
+pop pointer 1
+push that 0
+call Scene.drawOB 4
+pop temp 0
+label IF_FALSE1
+push argument 2
+push constant 2
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push pointer 0
+push constant 8516
+push constant 12
+push this 3
+push this 9
+add
+pop pointer 1
+push that 0
+call Math.multiply 2
+sub
+push constant 31
+call Math.divide 2
+push this 3
+push this 9
+add
+pop pointer 1
+push that 0
+push this 3
+push this 10
+add
+pop pointer 1
+push that 0
+call Scene.drawOB 4
+pop temp 0
+label IF_FALSE2
+push argument 2
+push constant 3
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push pointer 0
+push constant 7356
+push constant 12
+push this 3
+push this 9
+add
+pop pointer 1
+push that 0
+call Math.multiply 2
+add
+push constant 31
+call Math.divide 2
+push this 3
+push this 9
+add
+pop pointer 1
+push that 0
+push this 3
+push this 10
+add
+pop pointer 1
+push that 0
+call Scene.drawOB 4
+pop temp 0
+label IF_FALSE3
+label IF_FALSE0
+push this 3
+push constant 1
+sub
+pop this 3
+push argument 1
+push constant 2
+call Math.divide 2
+pop argument 1
+goto WHILE_EXP0
+label WHILE_END0
+push constant 0
+return
+function Scene.drawOB 0
+push argument 0
+pop pointer 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push argument 1
+push constant 10
+add
+push argument 2
+push argument 3
+push constant 20
+sub
+call Barrier.draw 3
+pop temp 0
+push constant 0
+return
+function Scene.update 0
+push argument 0
+pop pointer 0
+push this 5
+push constant 2
+call Math.divide 2
+pop this 5
+push this 6
+push constant 2
+call Math.divide 2
+pop this 6
+push this 7
+push constant 2
+call Math.divide 2
+pop this 7
+push constant 1
+push constant 7
+call Random.between 2
+pop this 4
+push this 8
+push constant 1
+add
+pop this 8
+push this 8
+push constant 6
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 0
+pop this 8
+push this 4
+call Output.printInt 1
+pop temp 0
+call Output.println 0
+pop temp 0
+push this 4
+push constant 1
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push this 5
+push constant 16384
+add
+pop this 5
+label IF_FALSE1
+push this 4
+push constant 2
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push this 6
+push constant 16384
+add
+pop this 6
+label IF_FALSE2
+push this 4
+push constant 3
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push this 7
+push constant 16384
+add
+pop this 7
+label IF_FALSE3
+push this 4
+push constant 4
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push this 5
+push constant 16384
+add
+pop this 5
+push this 6
+push constant 16384
+add
+pop this 6
+label IF_FALSE4
+push this 4
+push constant 5
+eq
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push this 6
+push constant 16384
+add
+pop this 6
+push this 7
+push constant 16384
+add
+pop this 7
+label IF_FALSE5
+push this 4
+push constant 6
+eq
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push this 5
+push constant 16384
+add
+pop this 5
+push this 7
+push constant 16384
+add
+pop this 7
+label IF_FALSE6
+label IF_FALSE0
+call Screen.clearScreen 0
+pop temp 0
+push constant 0
+return

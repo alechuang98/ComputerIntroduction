@@ -1,35 +1,46 @@
 class Scene{
-	field int x,y,i,T,msk,L,M,R;
+	field int x,y,i,T,ran,L,M,R,f;
 	field Array yp,xl;
 	constructor Scene new(int Ax ,int Ay,int _L,int _M,int _R){
-		let yp = Array.new(15);
-		let yp[1]=111;
-		let yp[2]=123;
-		let yp[3]=136;
-		let yp[4]=150;
-		let yp[5]=165;
-		let yp[6]=181;
-		let yp[7]=198;
-		let yp[8]=216;
-		let yp[9]=235;
-		let yp[10]=255;
+		let yp = Array.new(25);
+		
+		let yp[1]=112;
+		let yp[2]=117;
+		let yp[3]=123;
+		let yp[4]=130;
+		let yp[5]=138;
+		let yp[6]=147;
+		let yp[7]=157;
+		let yp[8]=168;
+		let yp[9]=180;
+		let yp[10]=193;
+		let yp[11]=207;
+		let yp[12]=222;
+		let yp[13]=238;
+		let yp[14]=255;
 
-		let xl = Array.new(15);
+		let xl = Array.new(25);
 		let xl[1]=49;
-		let xl[2]=58;
-		let xl[3]=67;
-		let xl[4]=78;
-		let xl[5]=90;
-		let xl[6]=102;
-		let xl[7]=116;
-		let xl[8]=130;
-		let xl[9]=145;
-		let xl[10]=160;
+		let xl[2]=53;
+		let xl[3]=58;
+		let xl[4]=63;
+		let xl[5]=69;
+		let xl[6]=76;
+		let xl[7]=84;
+		let xl[8]=93;
+		let xl[9]=102;
+		let xl[10]=112;
+		let xl[11]=123;
+		let xl[12]=134;
+		let xl[13]=146;
+		let xl[14]=160;
 		let x = Ax;
         let y = Ay;
         let L=_L;
         let R=_R;
         let M=_M;
+        let f=0;
+        do Random.seed(87);
 		do draw();
 		return this;
 	}
@@ -53,7 +64,7 @@ class Scene{
 	}
 
 	method void creatOB(int pos,int id){
-		let T=10;
+		let T=14;
 		while(T>0){
 			if((pos&1)=1){
 				if(id=1){
@@ -74,7 +85,7 @@ class Scene{
 
 	method void drawOB(int _x,int _y,int size){
 		do Screen.setColor(true);
-		do Screen.drawRectangle(_x+10,_y-(size/2),_x+size-10,_y);
+		do Barrier.draw(_x+10,_y,size-20);
 		return;
 	}
 
@@ -82,6 +93,34 @@ class Scene{
 		let L=(L/2);
 		let M=(M/2);
 		let R=(R/2);
+		let ran=Random.between(1,7);
+		let f=f+1;
+		if(f=6){
+			let f=0;
+			do Output.printInt(ran);
+			do Output.println();
+			if(ran=1){
+				let L=L+16384;
+			}
+			if(ran=2){
+				let M=M+16384;
+			}
+			if(ran=3){
+				let R=R+16384;
+			}
+			if(ran=4){
+				let L=L+16384;
+				let M=M+16384;
+			}
+			if(ran=5){
+				let M=M+16384;
+				let R=R+16384;
+			}
+			if(ran=6){
+				let L=L+16384;
+				let R=R+16384;
+			}
+		}
 		do Screen.clearScreen();
 		return;
 	}
