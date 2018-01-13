@@ -1,13 +1,10 @@
 class RacingGame{
 	field Scene scene;
 	field Ball ball;
-	field int T;
 	constructor RacingGame new(){
-		let scene = Scene.new(0 ,0, 0, 0, 0);
+		let scene = Scene.new(0 , 0, 0, 0, 0);
 		let ball = Ball.new();
-		let T=1000;
-		while(T>0){
-			let T=(T-1);
+		while(true){
 			do scene.update();
 			do scene.draw();
 			do Output.moveCursor(1,1);
@@ -18,21 +15,33 @@ class RacingGame{
 			if(RacingGame.there(scene._L())){
 				if(ball._pos()=(255-160)){
 					do Screen.clearScreen();
+					do Output.println();
 					do Output.printString("LOSE");
+					do Output.println();
+					do Output.printString("Score: ");
+					do Output.printInt(scene._cnt());
 					return this;
 				}
 			}
 			if(RacingGame.there(scene._M())){
 				if(ball._pos()=255){
 					do Screen.clearScreen();
+					do Output.println();
 					do Output.printString("LOSE");
+					do Output.println();
+					do Output.printString("Score: ");
+					do Output.printInt(scene._cnt());
 					return this;
 				}
 			}
 			if(RacingGame.there(scene._R())){
 				if(ball._pos()=(255+160)){
 					do Screen.clearScreen();
+					do Output.println();
 					do Output.printString("LOSE");
+					do Output.println();
+					do Output.printString("Score: ");
+					do Output.printInt(scene._cnt());
 					return this;
 				}
 			}

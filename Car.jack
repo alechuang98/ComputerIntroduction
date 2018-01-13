@@ -78,7 +78,6 @@ class Car{
 		do Screen.drawLine(x+21,y+220,x+21,y+230);
 
 
-
 		return;
 	}
 }

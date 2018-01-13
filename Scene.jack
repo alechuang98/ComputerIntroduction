@@ -1,5 +1,5 @@
 class Scene{
-	field int x,y,i,T,ran,L,M,R,f,cnt;
+	field int x,y,T,ran,L,M,R,f,cnt;
 	field Array yp,xl;
 	constructor Scene new(int Ax ,int Ay,int _L,int _M,int _R){
 		let yp = Array.new(25);
@@ -41,7 +41,7 @@ class Scene{
         let M=_M;
         let f=0;
         let cnt=0;
-        do Random.seed(87);
+        do Random.seed(100);
 		do draw();
 		return this;
 	}
