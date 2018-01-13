@@ -1,15 +1,53 @@
 class RacingGame{
 	field Scene scene;
+	field Ball ball;
 	field int T;
 	constructor RacingGame new(){
 		let scene = Scene.new(0 ,0, 0, 0, 0);
+		let ball = Ball.new();
 		let T=1000;
 		while(T>0){
 			let T=(T-1);
+			
 			do scene.update();
 			do scene.draw();
-			do Sys.wait(150);
+			do ball.move(scene);
+			do ball.draw();
+			if(RacingGame.there(scene._L())){
+				if(ball._pos()=(255-160)){
+					do Screen.clearScreen();
+					do Output.printString("LOSE");
+					return this;
+				}
+			}
+			if(RacingGame.there(scene._M())){
+				if(ball._pos()=255){
+					do Screen.clearScreen();
+					do Output.printString("LOSE");
+					return this;
+				}
+			}
+			if(RacingGame.there(scene._R())){
+				if(ball._pos()=(255+160)){
+					do Screen.clearScreen();
+					do Output.printString("LOSE");
+					return this;
+				}
+			}
+			do Sys.wait(37);
 		}
 		return this;
+	}
+	function bool there(int status){
+		if((status&2)=2){
+			return true;
+		}
+		if((status&4)=4){
+			return true;
+		}
+		if((status&1)=1){
+			return true;
+		}
+		return false;
 	}
 }

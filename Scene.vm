@@ -327,7 +327,7 @@ return
 function Scene.creatOB 0
 push argument 0
 pop pointer 0
-push constant 14
+push constant 13
 pop this 3
 label WHILE_EXP0
 push this 3
@@ -585,4 +585,19 @@ label IF_FALSE0
 call Screen.clearScreen 0
 pop temp 0
 push constant 0
+return
+function Scene._L 0
+push argument 0
+pop pointer 0
+push this 5
+return
+function Scene._R 0
+push argument 0
+pop pointer 0
+push this 7
+return
+function Scene._M 0
+push argument 0
+pop pointer 0
+push this 6
 return

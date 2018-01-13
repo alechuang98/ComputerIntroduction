@@ -71,16 +71,18 @@ sub
 push this 1
 call Screen.drawCircle 3
 pop temp 0
-push constant 12
+push argument 1
+call Scene.draw 1
+pop temp 0
+push constant 5
 call Sys.wait 1
 pop temp 0
 goto WHILE_EXP0
 label WHILE_END0
 label IF_FALSE1
+push constant 0
+return
 label IF_FALSE0
-push constant 10
-call Sys.wait 1
-pop temp 0
 push this 3
 push constant 130
 eq
@@ -125,6 +127,9 @@ push constant 0
 not
 call Screen.setColor 1
 pop temp 0
+push argument 1
+call Scene.draw 1
+pop temp 0
 push this 0
 push constant 255
 push this 1
@@ -132,15 +137,29 @@ sub
 push this 1
 call Screen.drawCircle 3
 pop temp 0
-push constant 12
+push constant 5
 call Sys.wait 1
 pop temp 0
 goto WHILE_EXP1
 label WHILE_END1
 label IF_FALSE3
 label IF_FALSE2
-push constant 10
-call Sys.wait 1
+push constant 0
+return
+function Ball.draw 0
+push argument 0
+pop pointer 0
+push this 0
+push constant 255
+push this 1
+sub
+push this 1
+call Screen.drawCircle 3
 pop temp 0
 push constant 0
+return
+function Ball._pos 0
+push argument 0
+pop pointer 0
+push this 0
 return
