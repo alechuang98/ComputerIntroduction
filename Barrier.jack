@@ -1,14 +1,18 @@
 class Barrier{
 	field int a;
-	constructor Barrier new(int x, int y, int d){
-		do draw(x, y, d);
+	constructor Barrier new(int x0, int y, int d0){
+		do draw(x0, y, d0);
 		return this;
 	}
-	method void draw(int x, int y, int d){
+	method void draw(int x0, int y, int d0){
 
+		var int x;
+		var int d;
 		var int d3;
 		var int d10;
 		var int dp;
+		let d = d0/2;
+		let x = x0+d;
 		let d3 = d/3;
 		let dp = d-d3;
 		let d10 = d/10;
