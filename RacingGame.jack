@@ -18,43 +18,17 @@ class RacingGame{
 			do ball.draw();
 			if(RacingGame.there(scene._L())){
 				if(ball._pos()=(255-160)){
-					do Screen.clearScreen();
-					do Output.moveCursor(9,25);
-					do Output.printString("LOSE");
-					do Output.moveCursor(10,25);
-					do Output.printString("Score: ");
-					do Output.printInt(scene._cnt());
-					do Sys.wait(1000);
-					do Screen.clearScreen();
-					return Gameover.draw();
+					return Gameover.draw(scene._cnt());
 				}
 			}
 			if(RacingGame.there(scene._M())){
 				if(ball._pos()=255){
-					do Screen.clearScreen();
-					do Output.moveCursor(9,25);
-					do Output.printString("LOSE");
-					do Output.moveCursor(10,25);
-					do Output.printString("Score: ");
-					do Output.printInt(scene._cnt());
-					do Sys.wait(1000);
-					do Screen.clearScreen();
-					do Gameover.draw();
-					return Gameover.draw();
+					return Gameover.draw(scene._cnt());
 				}
 			}
 			if(RacingGame.there(scene._R())){
 				if(ball._pos()=(255+160)){
-					do Screen.clearScreen();
-					do Output.moveCursor(9,25);
-					do Output.printString("LOSE");
-					do Output.moveCursor(10,25);
-					do Output.printString("Score: ");
-					do Output.printInt(scene._cnt());
-					do Sys.wait(1000);
-					do Screen.clearScreen();
-					do Gameover.draw();
-					return Gameover.draw();
+					return Gameover.draw(scene._cnt());
 				}
 			}
 			do Sys.wait(37);

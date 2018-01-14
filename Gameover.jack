@@ -1,15 +1,22 @@
 class Gameover{
 	static bool f;
-	function bool draw(){
+	function bool draw(int score){
+		do Screen.clearScreen();
+		do Output.moveCursor(14,25);
+		do Output.printString("Final Score: ");
+		do Output.printInt(score);
 		do Gametext.draw(60, 125);
 		do Overtext.draw(260, 125);
 		do Button.drawRestart();
 		let f=true;
+
 		while(true){
-			
 			if(Keyboard.keyPressed()=130){
 				if(f=false){
 					do Screen.clearScreen();
+					do Output.moveCursor(14,25);
+					do Output.printString("Final Score: ");
+					do Output.printInt(score);
 					do Gametext.draw(60, 125);
 					do Overtext.draw(260, 125);
 					do Button.drawRestart();
@@ -19,6 +26,9 @@ class Gameover{
 			if(Keyboard.keyPressed()=132){
 				if(f=true){
 					do Screen.clearScreen();
+					do Output.moveCursor(14,25);
+					do Output.printString("Final Score: ");
+					do Output.printInt(score);
 					do Gametext.draw(60, 125);
 					do Overtext.draw(260, 125);
 					do Button.drawQuit();
@@ -29,6 +39,6 @@ class Gameover{
 				return f;
 			}
 		}
-		return false;
+		return true;
 	}
 }
