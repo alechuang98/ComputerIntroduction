@@ -1,9 +1,39 @@
 class Scene{
-	field int x,y,T,ran,L,M,R,f,f2,cnt,TL,TR;
-	field Array yp,xl,xt;
+	field int x,y,T,ran,L,M,R,f,f2,cnt,TL,TR,now;
+	field Array yp,xl,xt,mp;
 	constructor Scene new(int Ax ,int Ay,int _L,int _M,int _R){
 		let xt = Array.new(25);
-		
+		let mp = Array.new(30);
+		let now=0;
+		let mp[1]=2;
+		let mp[2]=6;
+		let mp[3]=1;
+		let mp[4]=5;
+		let mp[5]=4;
+		let mp[6]=5;
+		let mp[7]=6;
+		let mp[8]=2;
+		let mp[9]=4;
+		let mp[10]=3;
+		let mp[11]=4;
+		let mp[12]=5;
+		let mp[13]=4;
+		let mp[14]=6;
+		let mp[15]=2;
+		let mp[16]=1;
+		let mp[17]=5;
+		let mp[18]=4;
+		let mp[19]=5;
+		let mp[20]=4;
+		let mp[21]=5;
+		let mp[22]=4;
+		let mp[23]=5;
+		let mp[24]=4;
+		let mp[25]=5;
+		let mp[26]=4;
+		let mp[27]=5;
+		let mp[28]=4;
+
 		let xt[1]=18;
 		let xt[2]=18;
 		let xt[3]=19;
@@ -70,7 +100,7 @@ class Scene{
 		do Memory.deAlloc(this);
 		return;
 	}
-	
+
 	method void draw(){
 
 		do Screen.setColor(true);
@@ -151,7 +181,7 @@ class Scene{
 		let R=(R/2);
 		let TL=(TL/2);
 		let TR=(TR/2);
-		let ran=Random.between(1,7);
+		//let ran=Random.between(1,7);
 		let f=f+1;
 		let f2=f2+1;
 		if(f2=8){
@@ -160,6 +190,11 @@ class Scene{
 			let TR=TR+16384;
 		}
 		if(f=6){
+			let now=now+1;
+			if(now>28){
+				let now=0;
+			}
+			let ran=mp[now];
 			let f=0;
 			let cnt=cnt+1;
 			if(ran=1){
