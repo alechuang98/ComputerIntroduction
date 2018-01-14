@@ -1,30 +1,49 @@
 class Mbutton{
-	function void draw(int x, int y){
-		//EASY
-		do Screen.drawLine(142, 160, 193, 160);
-		do Screen.drawLine(193, 160, 193, 180);
-		do Screen.drawLine(142, 180, 193, 180);
-		do Screen.drawLine(142, 160, 142, 180);
+	function void draw(int level){
+		do Screen.clearScreen();
 		do Output.moveCursor(15, 19);
 		do Output.printString("EASY");
 
-
-		//NORMAL
-		do Screen.drawLine(215, 160, 278, 160);
-		do Screen.drawLine(278, 160, 278, 180);
-		do Screen.drawLine(215, 180, 278, 180);
-		do Screen.drawLine(215, 160, 215, 180);
 		do Output.moveCursor(15, 28);
 		do Output.printString("NORMAL");
 
-
-		//HARD
-		do Screen.drawLine(300, 160, 352, 160);
-		do Screen.drawLine(352, 160, 352, 180);
-		do Screen.drawLine(300, 180, 352, 180);
-		do Screen.drawLine(300, 160, 300, 180);
 		do Output.moveCursor(15, 39);
 		do Output.printString("HARD");
+		//EASY
+		if(level=1){
+			do Screen.drawLine(142, 160, 193, 160);
+			do Screen.drawLine(193, 160, 193, 180);
+			do Screen.drawLine(142, 180, 193, 180);
+			do Screen.drawLine(142, 160, 142, 180);
+			do Screen.drawLine(142-2, 160-2, 193+2, 160-2);
+			do Screen.drawLine(193+2, 160-2, 193+2, 180+2);
+			do Screen.drawLine(142-2, 180+2, 193+2, 180+2);
+			do Screen.drawLine(142-2, 160-2, 142-2, 180+2);
+		}
+
+		//NORMAL
+		if(level=2){
+			do Screen.drawLine(215, 160, 278, 160);
+			do Screen.drawLine(278, 160, 278, 180);
+			do Screen.drawLine(215, 180, 278, 180);
+			do Screen.drawLine(215, 160, 215, 180);
+			do Screen.drawLine(215-2, 160-2, 278+2, 160-2);
+			do Screen.drawLine(278+2, 160-2, 278+2, 180+2);
+			do Screen.drawLine(215-2, 180+2, 278+2, 180+2);
+			do Screen.drawLine(215-2, 160-2, 215-2, 180+2);
+		}
+
+		//HARD
+		if(level=3){
+			do Screen.drawLine(300, 160, 352, 160);
+			do Screen.drawLine(352, 160, 352, 180);
+			do Screen.drawLine(300, 180, 352, 180);
+			do Screen.drawLine(300, 160, 300, 180);
+			do Screen.drawLine(300-2, 160-2, 352+2, 160-2);
+			do Screen.drawLine(352+2, 160-2, 352+2, 180+2);
+			do Screen.drawLine(300-2, 180+2, 352+2, 180+2);
+			do Screen.drawLine(300-2, 160-2, 300-2, 180+2);
+		}
 		
 		return;
 	}

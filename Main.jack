@@ -1,16 +1,18 @@
 class Main{
 	function void main(){
 		var RacingGame game;
+		var int level;
 		var char in;
 		/*while(true){
 			let in=Keyboard.keyPressed();
 			do Output.printInt(in);
 			do Output.println();
 		}*/
-		let game = RacingGame.new();
+		let game = RacingGame.new(2);
 		while(game.playing()){
+			let level=game._level();
 			do game.dispose();
-			let game = RacingGame.new();
+			let game = RacingGame.new(level);
 		}
 		do Screen.setColor(false);
 		do Screen.clearScreen();

@@ -1,0 +1,318 @@
+function Mbutton.draw 0
+call Screen.clearScreen 0
+pop temp 0
+push constant 15
+push constant 19
+call Output.moveCursor 2
+pop temp 0
+push constant 4
+call String.new 1
+push constant 69
+call String.appendChar 2
+push constant 65
+call String.appendChar 2
+push constant 83
+call String.appendChar 2
+push constant 89
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push constant 15
+push constant 28
+call Output.moveCursor 2
+pop temp 0
+push constant 6
+call String.new 1
+push constant 78
+call String.appendChar 2
+push constant 79
+call String.appendChar 2
+push constant 82
+call String.appendChar 2
+push constant 77
+call String.appendChar 2
+push constant 65
+call String.appendChar 2
+push constant 76
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push constant 15
+push constant 39
+call Output.moveCursor 2
+pop temp 0
+push constant 4
+call String.new 1
+push constant 72
+call String.appendChar 2
+push constant 65
+call String.appendChar 2
+push constant 82
+call String.appendChar 2
+push constant 68
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+push argument 0
+push constant 1
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 142
+push constant 160
+push constant 193
+push constant 160
+call Screen.drawLine 4
+pop temp 0
+push constant 193
+push constant 160
+push constant 193
+push constant 180
+call Screen.drawLine 4
+pop temp 0
+push constant 142
+push constant 180
+push constant 193
+push constant 180
+call Screen.drawLine 4
+pop temp 0
+push constant 142
+push constant 160
+push constant 142
+push constant 180
+call Screen.drawLine 4
+pop temp 0
+push constant 142
+push constant 2
+sub
+push constant 160
+push constant 2
+sub
+push constant 193
+push constant 2
+add
+push constant 160
+push constant 2
+sub
+call Screen.drawLine 4
+pop temp 0
+push constant 193
+push constant 2
+add
+push constant 160
+push constant 2
+sub
+push constant 193
+push constant 2
+add
+push constant 180
+push constant 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 142
+push constant 2
+sub
+push constant 180
+push constant 2
+add
+push constant 193
+push constant 2
+add
+push constant 180
+push constant 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 142
+push constant 2
+sub
+push constant 160
+push constant 2
+sub
+push constant 142
+push constant 2
+sub
+push constant 180
+push constant 2
+add
+call Screen.drawLine 4
+pop temp 0
+label IF_FALSE0
+push argument 0
+push constant 2
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push constant 215
+push constant 160
+push constant 278
+push constant 160
+call Screen.drawLine 4
+pop temp 0
+push constant 278
+push constant 160
+push constant 278
+push constant 180
+call Screen.drawLine 4
+pop temp 0
+push constant 215
+push constant 180
+push constant 278
+push constant 180
+call Screen.drawLine 4
+pop temp 0
+push constant 215
+push constant 160
+push constant 215
+push constant 180
+call Screen.drawLine 4
+pop temp 0
+push constant 215
+push constant 2
+sub
+push constant 160
+push constant 2
+sub
+push constant 278
+push constant 2
+add
+push constant 160
+push constant 2
+sub
+call Screen.drawLine 4
+pop temp 0
+push constant 278
+push constant 2
+add
+push constant 160
+push constant 2
+sub
+push constant 278
+push constant 2
+add
+push constant 180
+push constant 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 215
+push constant 2
+sub
+push constant 180
+push constant 2
+add
+push constant 278
+push constant 2
+add
+push constant 180
+push constant 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 215
+push constant 2
+sub
+push constant 160
+push constant 2
+sub
+push constant 215
+push constant 2
+sub
+push constant 180
+push constant 2
+add
+call Screen.drawLine 4
+pop temp 0
+label IF_FALSE1
+push argument 0
+push constant 3
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push constant 300
+push constant 160
+push constant 352
+push constant 160
+call Screen.drawLine 4
+pop temp 0
+push constant 352
+push constant 160
+push constant 352
+push constant 180
+call Screen.drawLine 4
+pop temp 0
+push constant 300
+push constant 180
+push constant 352
+push constant 180
+call Screen.drawLine 4
+pop temp 0
+push constant 300
+push constant 160
+push constant 300
+push constant 180
+call Screen.drawLine 4
+pop temp 0
+push constant 300
+push constant 2
+sub
+push constant 160
+push constant 2
+sub
+push constant 352
+push constant 2
+add
+push constant 160
+push constant 2
+sub
+call Screen.drawLine 4
+pop temp 0
+push constant 352
+push constant 2
+add
+push constant 160
+push constant 2
+sub
+push constant 352
+push constant 2
+add
+push constant 180
+push constant 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 300
+push constant 2
+sub
+push constant 180
+push constant 2
+add
+push constant 352
+push constant 2
+add
+push constant 180
+push constant 2
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 300
+push constant 2
+sub
+push constant 160
+push constant 2
+sub
+push constant 300
+push constant 2
+sub
+push constant 180
+push constant 2
+add
+call Screen.drawLine 4
+pop temp 0
+label IF_FALSE2
+push constant 0
+return

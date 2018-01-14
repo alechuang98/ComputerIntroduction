@@ -1,13 +1,35 @@
 class RacingGame{
 	field Scene scene;
 	field Ball ball;
-	constructor RacingGame new(){
-		let scene = Scene.new(0, 0, 0, 0, 0);
+	field int level,in;
+	constructor RacingGame new(int _level){
+		let scene = Scene.new(0, 0, 0, 0, 0, 0);
 		let ball = Ball.new();
-		
+		let level=_level;
+		let in=0;
 		return this;
 	}
 	method bool playing(){
+		do Mbutton.draw(level);
+		do Sys.wait(200);
+		while(~(in=128)){
+			do Sys.wait(75);
+			let in=Keyboard.keyPressed();
+			if(in=132){
+				if(~(level=3)){
+					let level=level+1;
+					do Mbutton.draw(level);
+				}
+			}
+			if(in=130){
+				if(~(level=1)){
+					let level=level-1;
+					do Mbutton.draw(level);
+				}
+			}
+		}
+		do scene.levelSelect(level);
+		
 		while(true){
 			do scene.update();
 			do scene.draw();
@@ -18,19 +40,19 @@ class RacingGame{
 			do ball.draw();
 			if(RacingGame.there(scene._L())){
 				if(ball._pos()=(255-160)){
-					do Sys.wait(200);
+					do Sys.wait(500);
 					return Gameover.draw(scene._cnt());
 				}
 			}
 			if(RacingGame.there(scene._M())){
 				if(ball._pos()=255){
-					do Sys.wait(200);
+					do Sys.wait(500);
 					return Gameover.draw(scene._cnt());
 				}
 			}
 			if(RacingGame.there(scene._R())){
 				if(ball._pos()=(255+160)){
-					do Sys.wait(200);
+					do Sys.wait(500);
 					return Gameover.draw(scene._cnt());
 				}
 			}
@@ -55,5 +77,8 @@ class RacingGame{
 		do ball.dispose();
 		do Memory.deAlloc(this);
 		return;
+	}
+	method int _level(){
+		return level;
 	}
 }

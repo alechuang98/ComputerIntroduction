@@ -1,5 +1,6 @@
-function Main.main 2
-call RacingGame.new 0
+function Main.main 3
+push constant 2
+call RacingGame.new 1
 pop local 0
 label WHILE_EXP0
 push local 0
@@ -7,9 +8,13 @@ call RacingGame.playing 1
 not
 if-goto WHILE_END0
 push local 0
+call RacingGame._level 1
+pop local 1
+push local 0
 call RacingGame.dispose 1
 pop temp 0
-call RacingGame.new 0
+push local 1
+call RacingGame.new 1
 pop local 0
 goto WHILE_EXP0
 label WHILE_END0

@@ -1,13 +1,15 @@
 class Scene{
-	field int x,y,T,ran,L,M,R,f,f2,cnt,TL,TR,now;
-	field Array yp,xl,xt,mp;
-	constructor Scene new(int Ax ,int Ay,int _L,int _M,int _R){
+	field int x,y,T,ran,L,M,R,f,f2,cnt,TL,TR,now,level;
+	field Array yp,xl,xt,mp,m2,m3;
+	constructor Scene new(int Ax ,int Ay,int _L,int _M,int _R,int _level){
 		let xt = Array.new(25);
 		let mp = Array.new(30);
+		let m2 = Array.new(30);
+		let m3 = Array.new(30);
 		let now=0;
 		let mp[1]=2;
 		let mp[2]=6;
-		let mp[3]=1;
+		let mp[3]=4;
 		let mp[4]=5;
 		let mp[5]=4;
 		let mp[6]=5;
@@ -33,6 +35,64 @@ class Scene{
 		let mp[26]=4;
 		let mp[27]=5;
 		let mp[28]=4;
+
+		let m2[1]=1;
+		let m2[2]=3;
+		let m2[3]=4;
+		let m2[4]=3;
+		let m2[5]=4;
+		let m2[6]=1;
+		let m2[7]=3;
+		let m2[8]=2;
+		let m2[9]=1;
+		let m2[10]=4;
+		let m2[11]=3;
+		let m2[12]=1;
+		let m2[13]=4;
+		let m2[14]=6;
+		let m2[15]=5;
+		let m2[16]=2;
+		let m2[17]=1;
+		let m2[18]=3;
+		let m2[19]=1;
+		let m2[20]=4;
+		let m2[21]=6;
+		let m2[22]=2;
+		let m2[23]=5;
+		let m2[24]=6;
+		let m2[25]=5;
+		let m2[26]=1;
+		let m2[27]=5;
+		let m2[28]=4;
+
+		let m3[1]=1;
+		let m3[2]=3;
+		let m3[3]=4;
+		let m3[4]=5;
+		let m3[5]=4;
+		let m3[6]=6;
+		let m3[7]=3;
+		let m3[8]=2;
+		let m3[9]=1;
+		let m3[10]=4;
+		let m3[11]=5;
+		let m3[12]=6;
+		let m3[13]=5;
+		let m3[14]=4;
+		let m3[15]=2;
+		let m3[16]=1;
+		let m3[17]=3;
+		let m3[18]=6;
+		let m3[19]=5;
+		let m3[20]=4;
+		let m3[21]=2;
+		let m3[22]=4;
+		let m3[23]=5;
+		let m3[24]=6;
+		let m3[25]=5;
+		let m3[26]=4;
+		let m3[27]=5;
+		let m3[28]=2;
 
 		let xt[1]=18;
 		let xt[2]=18;
@@ -91,6 +151,7 @@ class Scene{
         let f=0;
         let f2=0;
         let cnt=0;
+        let level=_level;
         do Random.seed(100);
 		do draw();
 		return this;
@@ -123,6 +184,10 @@ class Scene{
 		do creatOB(M,2);
 		do creatOB(R,3);
 
+		return;
+	}
+	method void levelSelect(int _level){
+		let level=_level;
 		return;
 	}
 
@@ -194,7 +259,16 @@ class Scene{
 			if(now>28){
 				let now=0;
 			}
-			let ran=mp[now];
+			if(level=3){
+				let ran=mp[now];
+			}
+			if(level=2){
+				let ran=m3[now];
+			}
+			if(level=1){
+				let ran=m2[now];
+			}
+			
 			let f=0;
 			let cnt=cnt+1;
 			if(ran=1){
