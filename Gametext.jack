@@ -56,7 +56,6 @@ class Gametext{
 		do Screen.drawLine(x+118, y, x+160, y);
 		do Screen.drawLine(x+160, y, x+166, y-12);
 		do Screen.drawLine(x+138, y-12, x+166, y-12);
-		
 
 		return;
 	}

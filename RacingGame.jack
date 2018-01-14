@@ -4,6 +4,10 @@ class RacingGame{
 	constructor RacingGame new(){
 		let scene = Scene.new(0, 0, 0, 0, 0);
 		let ball = Ball.new();
+		
+		return this;
+	}
+	method bool playing(){
 		while(true){
 			do scene.update();
 			do scene.draw();
@@ -22,8 +26,7 @@ class RacingGame{
 					do Output.printInt(scene._cnt());
 					do Sys.wait(1000);
 					do Screen.clearScreen();
-					do Gameover.draw();
-					return this;
+					return Gameover.draw();
 				}
 			}
 			if(RacingGame.there(scene._M())){
@@ -37,7 +40,7 @@ class RacingGame{
 					do Sys.wait(1000);
 					do Screen.clearScreen();
 					do Gameover.draw();
-					return this;
+					return Gameover.draw();
 				}
 			}
 			if(RacingGame.there(scene._R())){
@@ -51,12 +54,12 @@ class RacingGame{
 					do Sys.wait(1000);
 					do Screen.clearScreen();
 					do Gameover.draw();
-					return this;
+					return Gameover.draw();
 				}
 			}
 			do Sys.wait(37);
 		}
-		return this;
+		return false;
 	}
 	function bool there(int status){
 		if((status&2)=2){
@@ -69,5 +72,11 @@ class RacingGame{
 			return true;
 		}
 		return false;
+	}
+	method void dispose() {
+		do scene.dispose();
+		do ball.dispose();
+		do Memory.deAlloc(this);
+		return;
 	}
 }

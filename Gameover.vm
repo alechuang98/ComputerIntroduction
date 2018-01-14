@@ -7,7 +7,84 @@ push constant 260
 push constant 125
 call Overtext.draw 2
 pop temp 0
-call Button.draw 0
+call Button.drawRestart 0
 pop temp 0
+push constant 0
+not
+pop static 0
+label WHILE_EXP0
+push constant 0
+not
+not
+if-goto WHILE_END0
+call Keyboard.keyPressed 0
+push constant 130
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push static 0
+push constant 0
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+call Screen.clearScreen 0
+pop temp 0
+push constant 60
+push constant 125
+call Gametext.draw 2
+pop temp 0
+push constant 260
+push constant 125
+call Overtext.draw 2
+pop temp 0
+call Button.drawRestart 0
+pop temp 0
+push constant 0
+not
+pop static 0
+label IF_FALSE1
+label IF_FALSE0
+call Keyboard.keyPressed 0
+push constant 132
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push static 0
+push constant 0
+not
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+call Screen.clearScreen 0
+pop temp 0
+push constant 60
+push constant 125
+call Gametext.draw 2
+pop temp 0
+push constant 260
+push constant 125
+call Overtext.draw 2
+pop temp 0
+call Button.drawQuit 0
+pop temp 0
+push constant 0
+pop static 0
+label IF_FALSE3
+label IF_FALSE2
+call Keyboard.keyPressed 0
+push constant 128
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push static 0
+return
+label IF_FALSE4
+goto WHILE_EXP0
+label WHILE_END0
 push constant 0
 return

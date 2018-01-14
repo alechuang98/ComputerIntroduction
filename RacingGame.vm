@@ -11,6 +11,11 @@ call Scene.new 5
 pop this 0
 call Ball.new 0
 pop this 1
+push pointer 0
+return
+function RacingGame.playing 0
+push argument 0
+pop pointer 0
 label WHILE_EXP0
 push constant 0
 not
@@ -136,8 +141,6 @@ pop temp 0
 call Screen.clearScreen 0
 pop temp 0
 call Gameover.draw 0
-pop temp 0
-push pointer 0
 return
 label IF_FALSE1
 label IF_FALSE0
@@ -205,7 +208,7 @@ call Screen.clearScreen 0
 pop temp 0
 call Gameover.draw 0
 pop temp 0
-push pointer 0
+call Gameover.draw 0
 return
 label IF_FALSE3
 label IF_FALSE2
@@ -275,7 +278,7 @@ call Screen.clearScreen 0
 pop temp 0
 call Gameover.draw 0
 pop temp 0
-push pointer 0
+call Gameover.draw 0
 return
 label IF_FALSE5
 label IF_FALSE4
@@ -284,7 +287,7 @@ call Sys.wait 1
 pop temp 0
 goto WHILE_EXP0
 label WHILE_END0
-push pointer 0
+push constant 0
 return
 function RacingGame.there 0
 push argument 0
@@ -323,5 +326,19 @@ push constant 0
 not
 return
 label IF_FALSE2
+push constant 0
+return
+function RacingGame.dispose 0
+push argument 0
+pop pointer 0
+push this 0
+call Scene.dispose 1
+pop temp 0
+push this 1
+call Ball.dispose 1
+pop temp 0
+push pointer 0
+call Memory.deAlloc 1
+pop temp 0
 push constant 0
 return

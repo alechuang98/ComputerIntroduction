@@ -1,7 +1,19 @@
 class Main{
 	function void main(){
 		var RacingGame game;
+		var char in;
+		/*while(true){
+			let in=Keyboard.keyPressed();
+			do Output.printInt(in);
+			do Output.println();
+		}*/
 		let game = RacingGame.new();
+		while(game.playing()){
+			do game.dispose();
+			let game = RacingGame.new();
+		}
+		do Screen.setColor(false);
+		do Screen.clearScreen();
 		return;
 	}
 }

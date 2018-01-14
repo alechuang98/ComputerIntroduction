@@ -65,6 +65,12 @@ class Scene{
 		do draw();
 		return this;
 	}
+
+	method void dispose() {
+		do Memory.deAlloc(this);
+		return;
+	}
+	
 	method void draw(){
 
 		do Screen.setColor(true);
@@ -148,7 +154,7 @@ class Scene{
 		let ran=Random.between(1,7);
 		let f=f+1;
 		let f2=f2+1;
-		if(f2=4){
+		if(f2=8){
 			let f2=0;
 			let TL=TL+16384;
 			let TR=TR+16384;
@@ -193,4 +199,5 @@ class Scene{
 	method int _cnt(){
 		return cnt;
 	}
+
 }

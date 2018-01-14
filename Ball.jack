@@ -7,6 +7,10 @@ class Ball{
 		do Screen.drawCircle(pos,pos-r,r);
 		return this;
 	}
+	method void dispose() {
+		do Memory.deAlloc(this);
+		return;
+	}
 	method void move(Scene scene){
 		let in=Keyboard.keyPressed();
 		if(in=132){
@@ -48,4 +52,5 @@ class Ball{
 	method int _pos(){
 		return pos;
 	}
+
 }

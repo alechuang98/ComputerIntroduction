@@ -1,9 +1,34 @@
 class Gameover{
-	function void draw(){
+	static bool f;
+	function bool draw(){
 		do Gametext.draw(60, 125);
 		do Overtext.draw(260, 125);
-		do Button.draw();
-
-		return;
+		do Button.drawRestart();
+		let f=true;
+		while(true){
+			
+			if(Keyboard.keyPressed()=130){
+				if(f=false){
+					do Screen.clearScreen();
+					do Gametext.draw(60, 125);
+					do Overtext.draw(260, 125);
+					do Button.drawRestart();
+					let f=true;
+				}
+			}
+			if(Keyboard.keyPressed()=132){
+				if(f=true){
+					do Screen.clearScreen();
+					do Gametext.draw(60, 125);
+					do Overtext.draw(260, 125);
+					do Button.drawQuit();
+					let f=false;
+				}
+			}
+			if(Keyboard.keyPressed()=128){
+				return f;
+			}
+		}
+		return false;
 	}
 }
