@@ -12,7 +12,7 @@ class RacingGame{
 			do scene.update();
 			do scene.draw();
 			do Output.moveCursor(1,1);
-			do Output.printString("Current Score: ");
+			//do Output.printString("Current Score: ");
 			do Output.printInt(scene._cnt());
 			do ball.move(scene);
 			do ball.draw();
