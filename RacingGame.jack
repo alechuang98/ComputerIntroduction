@@ -20,6 +20,9 @@ class RacingGame{
 					do Output.moveCursor(10,25);
 					do Output.printString("Score: ");
 					do Output.printInt(scene._cnt());
+					do Sys.wait(1000);
+					do Screen.clearScreen();
+					do Gameover.draw();
 					return this;
 				}
 			}
@@ -31,6 +34,9 @@ class RacingGame{
 					do Output.moveCursor(10,25);
 					do Output.printString("Score: ");
 					do Output.printInt(scene._cnt());
+					do Sys.wait(1000);
+					do Screen.clearScreen();
+					do Gameover.draw();
 					return this;
 				}
 			}
@@ -42,6 +48,9 @@ class RacingGame{
 					do Output.moveCursor(10,25);
 					do Output.printString("Score: ");
 					do Output.printInt(scene._cnt());
+					do Sys.wait(1000);
+					do Screen.clearScreen();
+					do Gameover.draw();
 					return this;
 				}
 			}
