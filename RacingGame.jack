@@ -18,16 +18,19 @@ class RacingGame{
 			do ball.draw();
 			if(RacingGame.there(scene._L())){
 				if(ball._pos()=(255-160)){
+					do Sys.wait(200);
 					return Gameover.draw(scene._cnt());
 				}
 			}
 			if(RacingGame.there(scene._M())){
 				if(ball._pos()=255){
+					do Sys.wait(200);
 					return Gameover.draw(scene._cnt());
 				}
 			}
 			if(RacingGame.there(scene._R())){
 				if(ball._pos()=(255+160)){
+					do Sys.wait(200);
 					return Gameover.draw(scene._cnt());
 				}
 			}
