@@ -1,0 +1,21 @@
+class Button{
+	function void draw(){
+		do Screen.drawLine(150, 160, 220, 160);
+		do Screen.drawLine(220, 160, 220, 180);
+		do Screen.drawLine(150, 180, 220, 180);
+		do Screen.drawLine(150, 160, 150, 180);
+		do Output.moveCursor(15, 20);
+		do Output.printString("RESTART");
+
+
+		do Screen.drawLine(260, 160, 310, 160);
+		do Screen.drawLine(310, 160, 310, 180);
+		do Screen.drawLine(260, 180, 310, 180);
+		do Screen.drawLine(260, 160, 260, 180);
+		do Output.moveCursor(15, 20+14);
+		do Output.printString("QUIT");
+		
+
+		return;
+	}
+}

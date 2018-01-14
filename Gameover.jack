@@ -1,0 +1,9 @@
+class Gameover{
+	function void draw(){
+		do Gametext.draw(60, 125);
+		do Overtext.draw(260, 125);
+		do Button.draw();
+
+		return;
+	}
+}
