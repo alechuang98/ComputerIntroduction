@@ -1,7 +1,24 @@
 class Scene{
-	field int x,y,T,ran,L,M,R,f,cnt;
-	field Array yp,xl;
+	field int x,y,T,ran,L,M,R,f,f2,cnt,TL,TR;
+	field Array yp,xl,xt;
 	constructor Scene new(int Ax ,int Ay,int _L,int _M,int _R){
+		let xt = Array.new(25);
+		
+		let xt[1]=18;
+		let xt[2]=18;
+		let xt[3]=19;
+		let xt[4]=20;
+		let xt[5]=21;
+		let xt[6]=22;
+		let xt[7]=23;
+		let xt[8]=24;
+		let xt[9]=26;
+		let xt[10]=28;
+		let xt[11]=29;
+		let xt[12]=31;
+		let xt[13]=32;
+		let xt[14]=33;
+
 		let yp = Array.new(25);
 		
 		let yp[1]=112;
@@ -39,7 +56,10 @@ class Scene{
         let L=_L;
         let R=_R;
         let M=_M;
+        let TL=0;
+        let TR=0;
         let f=0;
+        let f2=0;
         let cnt=0;
         do Random.seed(100);
 		do draw();
@@ -56,11 +76,34 @@ class Scene{
 		do Screen.drawLine(337,255,277,100);
 		do Screen.drawLine(496,255,316,100);
 		do Screen.drawLine(497,255,317,100);
+		do Screen.drawLine(0,240,180,100);
+		do Screen.drawLine(1,240,181,100);
+		do Screen.drawLine(511,240,332,100);
+		do Screen.drawLine(510,240,331,100);
 
+		do creatTree(TL,1);
+		do creatTree(TR,2);
 		do creatOB(L,1);
 		do creatOB(M,2);
 		do creatOB(R,3);
 
+		return;
+	}
+
+	method void creatTree(int pos ,int id){
+		let T=11;
+		while(T>0){
+			if((pos&1)=1){
+				if(id=1){
+					do drawTree((2160-(9*yp[T]))/7,yp[T],xt[T]);
+				}
+				if(id=2){
+					do drawTree((1417+(9*yp[T]))/7,yp[T],xt[T]);	
+				}
+			}
+			let T=T-1;
+			let pos=(pos/2);
+		}
 		return;
 	}
 
@@ -84,6 +127,12 @@ class Scene{
 		return;
 	}
 
+	method void drawTree(int _x,int _y,int size){
+		do Screen.setColor(true);
+		do Tree.draw(_x,_y,(size/4));
+		return;
+	}
+
 	method void drawOB(int _x,int _y,int size){
 		do Screen.setColor(true);
 		do Barrier.draw(_x+10,_y,size-20);
@@ -94,13 +143,19 @@ class Scene{
 		let L=(L/2);
 		let M=(M/2);
 		let R=(R/2);
+		let TL=(TL/2);
+		let TR=(TR/2);
 		let ran=Random.between(1,7);
 		let f=f+1;
+		let f2=f2+1;
+		if(f2=4){
+			let f2=0;
+			let TL=TL+16384;
+			let TR=TR+16384;
+		}
 		if(f=6){
 			let f=0;
 			let cnt=cnt+1;
-			do Output.printInt(ran);
-			do Output.println();
 			if(ran=1){
 				let L=L+16384;
 			}

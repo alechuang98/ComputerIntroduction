@@ -2,7 +2,7 @@ class RacingGame{
 	field Scene scene;
 	field Ball ball;
 	constructor RacingGame new(){
-		let scene = Scene.new(0 , 0, 0, 0, 0);
+		let scene = Scene.new(0, 0, 0, 0, 0);
 		let ball = Ball.new();
 		while(true){
 			do scene.update();
@@ -15,9 +15,9 @@ class RacingGame{
 			if(RacingGame.there(scene._L())){
 				if(ball._pos()=(255-160)){
 					do Screen.clearScreen();
-					do Output.println();
+					do Output.moveCursor(9,25);
 					do Output.printString("LOSE");
-					do Output.println();
+					do Output.moveCursor(10,25);
 					do Output.printString("Score: ");
 					do Output.printInt(scene._cnt());
 					return this;
@@ -26,9 +26,9 @@ class RacingGame{
 			if(RacingGame.there(scene._M())){
 				if(ball._pos()=255){
 					do Screen.clearScreen();
-					do Output.println();
+					do Output.moveCursor(9,25);
 					do Output.printString("LOSE");
-					do Output.println();
+					do Output.moveCursor(10,25);
 					do Output.printString("Score: ");
 					do Output.printInt(scene._cnt());
 					return this;
@@ -37,9 +37,9 @@ class RacingGame{
 			if(RacingGame.there(scene._R())){
 				if(ball._pos()=(255+160)){
 					do Screen.clearScreen();
-					do Output.println();
+					do Output.moveCursor(9,25);
 					do Output.printString("LOSE");
-					do Output.println();
+					do Output.moveCursor(10,25);
 					do Output.printString("Score: ");
 					do Output.printInt(scene._cnt());
 					return this;

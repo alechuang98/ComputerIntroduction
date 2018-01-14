@@ -1,10 +1,5 @@
 class Tree{
-	field int a;
-	constructor Tree new(int x, int y, int d){
-		do draw(x, y, d);
-		return this;
-	}
-	method void draw(int x, int y, int d){
+	function void draw(int x, int y, int d){
 
 		do Screen.drawCircle(x, y-(8*d), 4*d);
 		do Screen.drawCircle(x-(2*d), y-(6*d), 3*d);

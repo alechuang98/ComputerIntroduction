@@ -143,6 +143,8 @@ pop temp 0
 goto WHILE_EXP1
 label WHILE_END1
 label IF_FALSE3
+push constant 0
+return
 label IF_FALSE2
 push constant 0
 return

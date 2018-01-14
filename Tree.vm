@@ -1,127 +1,113 @@
-function Tree.new 0
-push constant 1
-call Memory.alloc 1
-pop pointer 0
-push pointer 0
-push argument 0
-push argument 1
-push argument 2
-call Tree.draw 4
-pop temp 0
-push pointer 0
-return
 function Tree.draw 0
 push argument 0
-pop pointer 0
 push argument 1
-push argument 2
 push constant 8
-push argument 3
+push argument 2
 call Math.multiply 2
 sub
 push constant 4
-push argument 3
+push argument 2
 call Math.multiply 2
 call Screen.drawCircle 3
 pop temp 0
-push argument 1
+push argument 0
 push constant 2
-push argument 3
+push argument 2
 call Math.multiply 2
 sub
-push argument 2
+push argument 1
 push constant 6
-push argument 3
+push argument 2
 call Math.multiply 2
 sub
 push constant 3
-push argument 3
+push argument 2
 call Math.multiply 2
 call Screen.drawCircle 3
 pop temp 0
-push argument 1
+push argument 0
 push constant 2
-push argument 3
+push argument 2
 call Math.multiply 2
 add
-push argument 2
+push argument 1
 push constant 6
-push argument 3
+push argument 2
 call Math.multiply 2
 sub
 push constant 3
-push argument 3
+push argument 2
 call Math.multiply 2
 call Screen.drawCircle 3
 pop temp 0
 push constant 0
 call Screen.setColor 1
 pop temp 0
+push argument 0
 push argument 1
-push argument 2
 push constant 8
-push argument 3
+push argument 2
 call Math.multiply 2
 sub
 push constant 4
-push argument 3
+push argument 2
 call Math.multiply 2
 push constant 1
 sub
 call Screen.drawCircle 3
 pop temp 0
-push argument 1
+push argument 0
 push constant 2
-push argument 3
+push argument 2
 call Math.multiply 2
 sub
-push argument 2
+push argument 1
 push constant 6
-push argument 3
+push argument 2
 call Math.multiply 2
 sub
 push constant 3
-push argument 3
+push argument 2
 call Math.multiply 2
 push constant 1
 sub
 call Screen.drawCircle 3
 pop temp 0
-push argument 1
+push argument 0
 push constant 2
-push argument 3
+push argument 2
 call Math.multiply 2
 add
-push argument 2
+push argument 1
 push constant 6
-push argument 3
+push argument 2
 call Math.multiply 2
 sub
 push constant 3
-push argument 3
+push argument 2
 call Math.multiply 2
 push constant 1
 sub
 call Screen.drawCircle 3
 pop temp 0
-push argument 1
-push argument 3
+push argument 0
+push argument 2
 push constant 1
 sub
 sub
-push argument 2
+push argument 1
 push constant 5
-push argument 3
+push argument 2
 call Math.multiply 2
 push constant 1
 sub
 sub
-push argument 1
-push argument 3
+push argument 0
+push argument 2
 push constant 1
 sub
 add
-push argument 2
+push argument 1
 push constant 1
 sub
 call Screen.drawRectangle 4
@@ -130,158 +116,158 @@ push constant 0
 not
 call Screen.setColor 1
 pop temp 0
-push argument 1
-push argument 3
+push argument 0
+push argument 2
 sub
-push argument 2
 push argument 1
-push argument 2
+push argument 0
+push argument 1
 call Screen.drawLine 4
 pop temp 0
-push argument 1
-push argument 3
-sub
+push argument 0
 push argument 2
+sub
+push argument 1
 push constant 5
-push argument 3
+push argument 2
 call Math.multiply 2
 sub
-push argument 1
-push argument 3
-sub
+push argument 0
 push argument 2
+sub
+push argument 1
 call Screen.drawLine 4
 pop temp 0
-push argument 1
-push argument 3
-sub
+push argument 0
 push argument 2
+sub
+push argument 1
 push constant 5
-push argument 3
+push argument 2
+call Math.multiply 2
+sub
+push argument 0
+push constant 2
+push argument 2
 call Math.multiply 2
 sub
 push argument 1
-push constant 2
-push argument 3
-call Math.multiply 2
-sub
-push argument 2
 push constant 6
-push argument 3
+push argument 2
 call Math.multiply 2
 sub
 call Screen.drawLine 4
 pop temp 0
-push argument 1
+push argument 0
 push constant 2
-push argument 3
-call Math.multiply 2
-sub
 push argument 2
-push constant 6
-push argument 3
 call Math.multiply 2
 sub
 push argument 1
-push argument 3
-sub
-push argument 2
 push constant 6
-push argument 3
+push argument 2
+call Math.multiply 2
+sub
+push argument 0
+push argument 2
+sub
+push argument 1
+push constant 6
+push argument 2
 call Math.multiply 2
 sub
 call Screen.drawLine 4
 pop temp 0
-push argument 1
-push argument 3
-sub
+push argument 0
 push argument 2
+sub
+push argument 1
 push constant 6
-push argument 3
+push argument 2
 call Math.multiply 2
 sub
+push argument 0
 push argument 1
-push argument 2
 push constant 8
-push argument 3
+push argument 2
 call Math.multiply 2
 sub
 call Screen.drawLine 4
 pop temp 0
+push argument 0
 push argument 1
+push argument 0
 push argument 2
-push argument 1
-push argument 3
 add
-push argument 2
+push argument 1
 call Screen.drawLine 4
 pop temp 0
-push argument 1
-push argument 3
-add
+push argument 0
 push argument 2
+add
+push argument 1
 push constant 5
-push argument 3
+push argument 2
 call Math.multiply 2
 sub
-push argument 1
-push argument 3
-add
+push argument 0
 push argument 2
+add
+push argument 1
 call Screen.drawLine 4
 pop temp 0
-push argument 1
-push argument 3
-add
+push argument 0
 push argument 2
+add
+push argument 1
 push constant 5
-push argument 3
+push argument 2
 call Math.multiply 2
 sub
-push argument 1
+push argument 0
 push constant 2
-push argument 3
+push argument 2
 call Math.multiply 2
 add
-push argument 2
+push argument 1
 push constant 6
-push argument 3
+push argument 2
 call Math.multiply 2
 sub
 call Screen.drawLine 4
 pop temp 0
-push argument 1
+push argument 0
 push constant 2
-push argument 3
+push argument 2
 call Math.multiply 2
 add
-push argument 2
+push argument 1
 push constant 6
-push argument 3
+push argument 2
 call Math.multiply 2
 sub
-push argument 1
-push argument 3
-add
+push argument 0
 push argument 2
+add
+push argument 1
 push constant 6
-push argument 3
+push argument 2
 call Math.multiply 2
 sub
 call Screen.drawLine 4
 pop temp 0
-push argument 1
-push argument 3
-add
+push argument 0
 push argument 2
+add
+push argument 1
 push constant 6
-push argument 3
+push argument 2
 call Math.multiply 2
 sub
+push argument 0
 push argument 1
-push argument 2
 push constant 8
-push argument 3
+push argument 2
 call Math.multiply 2
 sub
 call Screen.drawLine 4

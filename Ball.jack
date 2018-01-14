@@ -37,6 +37,7 @@ class Ball{
 					do Sys.wait(5);
 				}
 			}
+			return;
 		}
 		return;
 	}
