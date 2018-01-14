@@ -1,0 +1,31 @@
+class Mbutton{
+	function void draw(int x, int y){
+		//EASY
+		do Screen.drawLine(142, 160, 193, 160);
+		do Screen.drawLine(193, 160, 193, 180);
+		do Screen.drawLine(142, 180, 193, 180);
+		do Screen.drawLine(142, 160, 142, 180);
+		do Output.moveCursor(15, 19);
+		do Output.printString("EASY");
+
+
+		//NORMAL
+		do Screen.drawLine(215, 160, 278, 160);
+		do Screen.drawLine(278, 160, 278, 180);
+		do Screen.drawLine(215, 180, 278, 180);
+		do Screen.drawLine(215, 160, 215, 180);
+		do Output.moveCursor(15, 28);
+		do Output.printString("NORMAL");
+
+
+		//HARD
+		do Screen.drawLine(300, 160, 352, 160);
+		do Screen.drawLine(352, 160, 352, 180);
+		do Screen.drawLine(300, 180, 352, 180);
+		do Screen.drawLine(300, 160, 300, 180);
+		do Output.moveCursor(15, 39);
+		do Output.printString("HARD");
+		
+		return;
+	}
+}
