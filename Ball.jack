@@ -5,6 +5,15 @@ class Ball{
 		let pos=255;
 		let r=40;
 		do Screen.drawCircle(pos,pos-r,r);
+		do Screen.setColor(false);
+		do Screen.drawCircle(pos,pos-r,r-2);
+		do Screen.setColor(true);
+		do Screen.drawCircle(pos,(pos-r)+13,r/4);
+		do Screen.setColor(false);
+		do Screen.drawCircle(pos,pos-r+13,(r/4)-2);
+		do Screen.setColor(true);
+		do Screen.drawCircle(pos-10,(pos-r)-15,r/8);
+		do Screen.drawCircle(pos+10,(pos-r)-15,r/8);
 		return this;
 	}
 	method void dispose() {
@@ -22,6 +31,17 @@ class Ball{
 					let pos=pos+20;
 					do Screen.setColor(true);
 					do Screen.drawCircle(pos,255-r,r);
+					do Screen.setColor(false);
+					do Screen.drawCircle(pos,255-r,r-2);
+					do Screen.setColor(true);
+					do Screen.drawCircle(pos,255-r+13,r/4);
+					do Screen.setColor(false);
+					do Screen.drawCircle(pos,255-r+13,(r/4)-2);
+					do Screen.setColor(true);
+					do Screen.drawCircle(pos,(255-r)-5,r/8);
+					do Screen.drawCircle(pos,(255-r)-5,r/8);
+					do Screen.drawCircle(pos-10,(255-r)-15,r/8);
+					do Screen.drawCircle(pos+10,(255-r)-15,r/8);
 					do scene.draw();
 					do Sys.wait(5);
 				}
@@ -38,6 +58,15 @@ class Ball{
 					do Screen.setColor(true);
 					do scene.draw();
 					do Screen.drawCircle(pos,255-r,r);
+					do Screen.setColor(false);
+					do Screen.drawCircle(pos,255-r,r-2);
+					do Screen.setColor(true);
+					do Screen.drawCircle(pos,255-r+13,r/4);
+					do Screen.setColor(false);
+					do Screen.drawCircle(pos,255-r+13,(r/4)-2);
+					do Screen.setColor(true);
+					do Screen.drawCircle(pos-10,(255-r)-15,r/8);
+					do Screen.drawCircle(pos+10,(255-r)-15,r/8);
 					do Sys.wait(5);
 				}
 			}
@@ -47,6 +76,15 @@ class Ball{
 	}
 	method void draw(){
 		do Screen.drawCircle(pos,255-r,r);
+		do Screen.setColor(false);
+		do Screen.drawCircle(pos,255-r,r-2);
+		do Screen.setColor(true);
+		do Screen.drawCircle(pos,255-r+13,r/4);
+		do Screen.setColor(false);
+		do Screen.drawCircle(pos,255-r+13,(r/4)-2);
+		do Screen.setColor(true);
+		do Screen.drawCircle(pos-10,(255-r)-15,r/8);
+		do Screen.drawCircle(pos+10,(255-r)-15,r/8);
 		return;
 	}
 	method int _pos(){
