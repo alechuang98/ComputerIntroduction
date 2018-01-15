@@ -24,6 +24,10 @@ pop pointer 0
 push this 2
 call Mbutton.draw 1
 pop temp 0
+push constant 50
+push constant 100
+call RollingBalltext.draw 2
+pop temp 0
 push constant 200
 call Sys.wait 1
 pop temp 0
@@ -59,6 +63,10 @@ pop this 2
 push this 2
 call Mbutton.draw 1
 pop temp 0
+push constant 50
+push constant 100
+call RollingBalltext.draw 2
+pop temp 0
 label IF_FALSE1
 label IF_FALSE0
 push this 3
@@ -80,6 +88,10 @@ sub
 pop this 2
 push this 2
 call Mbutton.draw 1
+pop temp 0
+push constant 50
+push constant 100
+call RollingBalltext.draw 2
 pop temp 0
 label IF_FALSE3
 label IF_FALSE2
@@ -191,6 +203,7 @@ pop temp 0
 goto WHILE_EXP1
 label WHILE_END1
 push constant 0
+not
 return
 function RacingGame.there 0
 push argument 0

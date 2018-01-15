@@ -11,6 +11,7 @@ class RacingGame{
 	}
 	method bool playing(){
 		do Mbutton.draw(level);
+		do RollingBalltext.draw(50,100);
 		do Sys.wait(200);
 		while(~(in=128)){
 			do Sys.wait(75);
@@ -19,12 +20,14 @@ class RacingGame{
 				if(~(level=3)){
 					let level=level+1;
 					do Mbutton.draw(level);
+					do RollingBalltext.draw(50,100);
 				}
 			}
 			if(in=130){
 				if(~(level=1)){
 					let level=level-1;
 					do Mbutton.draw(level);
+					do RollingBalltext.draw(50,100);
 				}
 			}
 		}
@@ -58,7 +61,7 @@ class RacingGame{
 			}
 			do Sys.wait(37);
 		}
-		return false;
+		return true;
 	}
 	function bool there(int status){
 		if((status&2)=2){

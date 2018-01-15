@@ -1,0 +1,128 @@
+class RollingBalltext{
+	function void draw(int x,int y){
+
+		//R
+		do Screen.drawLine(x, y, x+30, y-60);
+		do Screen.drawLine(x+30, y-60, x+70, y-60);
+		do Screen.drawLine(x+70, y-60, x+53, y-20);
+		do Screen.drawLine(x+53, y-20, x+40, y-20);
+		do Screen.drawLine(x+40, y-20, x+45, y);
+		do Screen.drawLine(x+45, y, x+30, y);
+		do Screen.drawLine(x+30, y, x+25, y-20);
+		do Screen.drawLine(x+25, y-20, x+15, y);
+		do Screen.drawLine(x+15, y, x, y);
+		do Screen.drawLine(x+30, y-30, x+35, y-40);
+		do Screen.drawLine(x+35, y-40, x+45, y-40);
+		do Screen.drawLine(x+45, y-40, x+40, y-30);
+		do Screen.drawLine(x+40, y-30, x+30, y-30);
+
+		//O
+		do Screen.drawLine(x+45, y, x+70, y-60);
+		do Screen.drawLine(x+70, y-60, x+94, y-60);
+		do Screen.drawLine(x+94, y-60, x+70, y);
+		do Screen.drawLine(x+70, y, x+45, y);
+		do Screen.drawLine(x+65, y-30, x+70, y-40);
+		do Screen.drawLine(x+70, y-40, x+78, y-40);
+		do Screen.drawLine(x+78, y-40, x+74, y-30);
+		do Screen.drawLine(x+74, y-30, x+65, y-30);
+
+		//L1
+		do Screen.drawLine(x+70, y, x+94, y-60);
+		do Screen.drawLine(x+94, y-60, x+105, y-60);
+		do Screen.drawLine(x+105, y-60, x+87, y-15);
+		do Screen.drawLine(x+87, y-15, x+103, y-15);
+		do Screen.drawLine(x+103, y-15, x+97, y);
+		do Screen.drawLine(x+97, y, x+70, y);
+
+		//L2
+		do Screen.drawLine(x+97, y, x+122, y-60);
+		do Screen.drawLine(x+122, y-60, x+133, y-60);
+		do Screen.drawLine(x+133, y-60, x+115, y-15);
+		do Screen.drawLine(x+115, y-15, x+129, y-15);
+		do Screen.drawLine(x+129, y-15, x+122, y);
+		do Screen.drawLine(x+122, y, x+98, y);
+
+		//I
+		do Screen.drawLine(x+123, y, x+147, y-60);
+		do Screen.drawLine(x+147, y-60, x+163, y-60);
+		do Screen.drawLine(x+163, y-60, x+139, y);
+		do Screen.drawLine(x+139, y, x+123, y);
+ 	
+ 		//N
+ 		do Screen.drawLine(x+139, y, x+163, y-60);
+ 		do Screen.drawLine(x+163, y-60, x+173, y-60);
+ 		do Screen.drawLine(x+173, y-60, x+167, y-20);
+ 		do Screen.drawLine(x+167, y-20, x+183, y-60);
+ 		do Screen.drawLine(x+183, y-60, x+193, y-60);
+ 		do Screen.drawLine(x+193, y-60, x+169, y);
+ 		do Screen.drawLine(x+169, y, x+159, y);
+ 		do Screen.drawLine(x+159, y, x+165, y-40);
+ 		do Screen.drawLine(x+165, y-40, x+149, y);
+ 		do Screen.drawLine(x+149, y, x+139, y);
+
+ 		//G
+ 		do Screen.drawLine(x+169, y, x+193, y-60);
+		do Screen.drawLine(x+193, y-60, x+230, y-60);
+		do Screen.drawLine(x+230, y-60, x+225, y-48);
+		do Screen.drawLine(x+225, y-48, x+200, y-48);
+		do Screen.drawLine(x+200, y-48, x+185, y-12);
+		do Screen.drawLine(x+185, y-12, x+201, y-12);
+		do Screen.drawLine(x+201, y-12, x+204, y-18);
+		do Screen.drawLine(x+204, y-18, x+197, y-18);
+		do Screen.drawLine(x+197, y-18, x+202, y-28);
+		do Screen.drawLine(x+202, y-28, x+218, y-28);
+		do Screen.drawLine(x+169, y, x+207, y);
+		do Screen.drawLine(x+207, y, x+218, y-28);
+
+		//B
+		do Screen.drawLine(x+237, y, x+260, y-60);
+		do Screen.drawLine(x+260, y-60, x+285, y-60);
+		do Screen.drawLine(x+285, y-60, x+274, y-30);
+		do Screen.drawLine(x+274, y-30, x+290, y-30);
+		do Screen.drawLine(x+290, y-30, x+278, y);
+		do Screen.drawLine(x+278, y, x+237, y);
+
+		do Screen.drawLine(x+253, y-10, x+257, y-20);
+		do Screen.drawLine(x+257, y-20, x+271, y-20);
+		do Screen.drawLine(x+271, y-20, x+267, y-10);
+		do Screen.drawLine(x+267, y-10, x+253, y-10);
+
+		do Screen.drawLine(x+261, y-30, x+267, y-45);
+		do Screen.drawLine(x+267, y-45, x+272, y-45);
+		do Screen.drawLine(x+272, y-45, x+266, y-30);
+		do Screen.drawLine(x+266, y-30, x+261, y-30);
+
+		//A
+		
+		do Screen.drawLine(x+278, y, x+302, y-60);
+		do Screen.drawLine(x+302, y-60, x+326, y-60);
+		do Screen.drawLine(x+326, y-60, x+302, y);
+		do Screen.drawLine(x+302, y, x+294, y);
+		do Screen.drawLine(x+294, y, x+302, y-20);
+		do Screen.drawLine(x+302, y-20, x+294, y-20);
+		do Screen.drawLine(x+294, y-20, x+286, y);
+		do Screen.drawLine(x+286, y, x+278, y);
+		do Screen.drawLine(x+298, y-30, x+302, y-40);
+		do Screen.drawLine(x+302, y-40, x+311, y-40);
+		do Screen.drawLine(x+311, y-40, x+307, y-30);
+		do Screen.drawLine(x+307, y-30, x+298, y-30);
+
+		//L3
+		do Screen.drawLine(x+302, y, x+326, y-60);
+		do Screen.drawLine(x+326, y-60, x+338, y-60);
+		do Screen.drawLine(x+338, y-60, x+320, y-15);
+		do Screen.drawLine(x+320, y-15, x+336, y-15);
+		do Screen.drawLine(x+336, y-15, x+330, y);
+		do Screen.drawLine(x+330, y, x+302, y);
+
+		//L4
+		do Screen.drawLine(x+330, y, x+354, y-60);
+		do Screen.drawLine(x+354, y-60, x+365, y-60);
+		do Screen.drawLine(x+365, y-60, x+347, y-15);
+		do Screen.drawLine(x+347, y-15, x+363, y-15);
+		do Screen.drawLine(x+363, y-15, x+357, y);
+		do Screen.drawLine(x+357, y, x+330, y);
+
+		return;
+	}
+}
